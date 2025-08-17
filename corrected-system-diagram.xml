@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2025-08-17T12:00:00.000Z" agent="5.0 (Claude)" etag="abc123" version="24.7.7" type="device">
+  <diagram name="System Architecture" id="system-arch">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- User Actor -->
+        <mxCell id="user-1" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="100" y="200" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Frontend Application -->
+        <mxCell id="frontend-2" value="Frontend&#xa;Application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="200" y="220" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- API Gateway -->
+        <mxCell id="api-3" value="API Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="380" y="220" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Backend Service -->
+        <mxCell id="backend-4" value="Backend&#xa;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="560" y="220" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Database -->
+        <mxCell id="database-5" value="Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="590" y="340" width="60" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Connection: User to Frontend -->
+        <mxCell id="edge-6" value="HTTP Requests" style="endArrow=classic;html=1;rounded=0;" parent="1" source="user-1" target="frontend-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="250" as="sourcePoint"/>
+            <mxPoint x="200" y="200" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Connection: Frontend to API Gateway -->
+        <mxCell id="edge-7" value="API Calls" style="endArrow=classic;html=1;rounded=0;" parent="1" source="frontend-2" target="api-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="250" as="sourcePoint"/>
+            <mxPoint x="380" y="200" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Connection: API Gateway to Backend -->
+        <mxCell id="edge-8" value="Service Calls" style="endArrow=classic;html=1;rounded=0;" parent="1" source="api-3" target="backend-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="250" as="sourcePoint"/>
+            <mxPoint x="560" y="200" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Connection: Backend to Database -->
+        <mxCell id="edge-9" value="SQL Queries" style="endArrow=classic;html=1;rounded=0;" parent="1" source="backend-4" target="database-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="290" as="sourcePoint"/>
+            <mxPoint x="620" y="330" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Title -->
+        <mxCell id="title-10" value="System Architecture Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="100" width="200" height="30" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
